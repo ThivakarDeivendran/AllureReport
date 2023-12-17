@@ -21,7 +21,7 @@ public class TestClass {
 		dr.manage().window().maximize();
 		dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		String title = dr.getTitle();
-		Assert.assertEquals(title, "Facebook – log in or sign");
+		Assert.assertEquals(title, "Facebook â€“ log in or sign");
 	}
 	@Test
 	public void testMethod() {
@@ -29,6 +29,7 @@ public class TestClass {
 		dr.findElement(By.xpath("//input[@id='pass']")).sendKeys("Thivakar12");
 		dr.findElement(By.xpath("//button[@name ='login']")).click();
 		dr.quit();
+		System.out.println("Someone add this code");
 	}
 
 }
