@@ -13,7 +13,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestClass {
 	
 	public static WebDriver dr;
-	@Test
+	@Test(priority =1)
 	public void setUp() {
 		WebDriverManager.chromedriver().setup();
 		 dr= new ChromeDriver();
@@ -23,7 +23,7 @@ public class TestClass {
 		String title = dr.getTitle();
 		Assert.assertEquals(title, "Facebook – log in or sign");
 	}
-	@Test
+	@Test(priority=2)
 	public void testMethod() {
 		dr.findElement(By.xpath("//input[@id='email']")).sendKeys("Thivakar");
 		dr.findElement(By.xpath("//input[@id='pass']")).sendKeys("Thivakar12");
