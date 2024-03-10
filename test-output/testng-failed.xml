@@ -5,7 +5,9 @@
     <classes>
       <class name="allureReportPackage.TestClass">
         <methods>
-          <include name="setUp"/>
+          <include name="dropdownMethod"/>
+          <include name="skipMethod"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- allureReportPackage.TestClass -->
     </classes>

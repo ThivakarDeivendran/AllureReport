@@ -1,26 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="6" passed="4" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-02T21:44:21 IST" name="Suite" finished-at="2024-03-02T21:44:48 IST" duration-ms="26759">
+  <suite started-at="2024-03-10T22:01:19 IST" name="Suite" finished-at="2024-03-10T22:01:48 IST" duration-ms="28783">
     <groups>
     </groups>
-    <test started-at="2024-03-02T21:44:21 IST" name="Test" finished-at="2024-03-02T21:44:48 IST" duration-ms="26759">
+    <test started-at="2024-03-10T22:01:19 IST" name="Test" finished-at="2024-03-10T22:01:48 IST" duration-ms="28783">
       <class name="allureReportPackage.TestClass">
-        <test-method signature="setUp()[pri:1, instance:allureReportPackage.TestClass@45a4b042]" started-at="2024-03-02T21:44:21 IST" name="setUp" finished-at="2024-03-02T21:44:46 IST" duration-ms="24588" status="FAIL">
+        <test-method signature="setUp()[pri:1, instance:allureReportPackage.TestClass@7e744f43]" started-at="2024-03-10T22:01:19 IST" name="setUp" description=" login vaildation " finished-at="2024-03-10T22:01:28 IST" duration-ms="9372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testMethod()[pri:2, instance:allureReportPackage.TestClass@7e744f43]" started-at="2024-03-10T22:01:29 IST" name="testMethod" finished-at="2024-03-10T22:01:35 IST" duration-ms="6517" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+        <test-method signature="alertMethod()[pri:3, instance:allureReportPackage.TestClass@7e744f43]" started-at="2024-03-10T22:01:35 IST" name="alertMethod" finished-at="2024-03-10T22:01:39 IST" duration-ms="3315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- alertMethod -->
+        <test-method signature="radioCheckBoxMethod()[pri:4, instance:allureReportPackage.TestClass@7e744f43]" started-at="2024-03-10T22:01:39 IST" name="radioCheckBoxMethod" finished-at="2024-03-10T22:01:47 IST" duration-ms="8238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- radioCheckBoxMethod -->
+        <test-method signature="dropdownMethod()[pri:5, instance:allureReportPackage.TestClass@7e744f43]" started-at="2024-03-10T22:01:47 IST" name="dropdownMethod" finished-at="2024-03-10T22:01:47 IST" duration-ms="245" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Facebook â€“ log in or sign] but found [Facebook – log in or sign up]]]>
+              <![CDATA[The following asserts failed:
+expected [Samp Webpage for Selenium Automation Practice | ArtOfTesting] but found [Sample Webpage for Selenium Automation Practice | ArtOfTesting]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Facebook â€“ log in or sign] but found [Facebook – log in or sign up]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at allureReportPackage.TestClass.setUp(TestClass.java:24)
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [Samp Webpage for Selenium Automation Practice | ArtOfTesting] but found [Sample Webpage for Selenium Automation Practice | ArtOfTesting]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at allureReportPackage.TestClass.dropdownMethod(TestClass.java:112)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -54,11 +68,53 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testMethod()[pri:2, instance:allureReportPackage.TestClass@45a4b042]" started-at="2024-03-02T21:44:46 IST" name="testMethod" finished-at="2024-03-02T21:44:48 IST" duration-ms="1897" status="PASS">
+        </test-method> <!-- dropdownMethod -->
+        <test-method signature="skipMethod()[pri:6, instance:allureReportPackage.TestClass@7e744f43]" started-at="2024-03-10T22:01:48 IST" name="skipMethod" finished-at="2024-03-10T22:01:48 IST" duration-ms="13" status="SKIP">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[This method need to skip]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: This method need to skip
+at allureReportPackage.TestClass.skipMethod(TestClass.java:122)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethod -->
+        </test-method> <!-- skipMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:allureReportPackage.TestClass@7e744f43]" started-at="2024-03-10T22:01:48 IST" name="tearDown" finished-at="2024-03-10T22:01:56 IST" duration-ms="7810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- allureReportPackage.TestClass -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

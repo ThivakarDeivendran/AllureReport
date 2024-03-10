@@ -3,7 +3,10 @@
   <groupId>AllureReportProject</groupId>
   <artifactId>AllureReport</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+  <properties>
+    <aspectj.version>1.9.20.1</aspectj.version>
+    <suiteLocation>C:\DATA\disk_d\User\Document\Eclipse_workspace\AllureReport\AllureReportTestng.xml</suiteLocation>
+</properties>
   
   <dependencies>
   
@@ -30,10 +33,42 @@
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>7.7.1</version>
+    <version>7.4.0</version>
     <scope>test</scope>
 </dependency>
-
+<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+<dependency>
+    <groupId>org.aspectj</groupId>
+    <artifactId>aspectjweaver</artifactId>
+    <version>1.9.20.1</version>
+    <scope>runtime</scope>
+</dependency>
  </dependencies>
+ <build>
+ <plugins>
+ <plugin>
+<groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+        <source>1.8</source>
+        <target>1.8</target>
+        </configuration>
+</plugin>
+ <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.1.2</version>
+    <configuration>
+        <argLine>
+            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+        </argLine>
+        <suiteXmlFiles>
+        <suiteXmlFile>${suiteLocation}</suiteXmlFile>
+        </suiteXmlFiles>
+    </configuration>
+</plugin>
+
+ </plugins>
+ </build>
 
 </project>
